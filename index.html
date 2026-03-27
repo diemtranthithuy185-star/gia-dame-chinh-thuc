@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bảng Giá Dame TikTok</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial;
+background:black;
+color:white;
+text-align:center;
+overflow:hidden;
+}
+
+/* màn hình chạm vào web */
+
+#intro{
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+align-items:center;
+justify-content:center;
+z-index:999;
+font-size:30px;
+color:#00ff9d;
+text-shadow:0 0 20px #00ff9d;
+}
+
+/* nội dung web */
+
+#main{
+display:none;
+}
+
+/* tiêu đề */
+
+header{
+font-size:28px;
+padding:15px;
+color:#00ff9d;
+text-shadow:0 0 15px #00ff9d;
+}
+
+/* box */
+
+.box{
+background:#111;
+margin:20px;
+padding:20px;
+border-radius:15px;
+box-shadow:0 0 15px #00ff9d;
+}
+
+/* nút */
+
+button{
+padding:12px 20px;
+background:#00ff9d;
+border:none;
+border-radius:10px;
+margin:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+/* chữ copy */
+
+#copyText{
+font-size:13px;
+margin-top:6px;
+color:#00ff9d;
+opacity:0;
+transition:1.5s;
+}
+
+/* chữ vàng */
+
+.note-yellow{
+margin-top:12px;
+color:#ffd700;
+font-size:15px;
+}
+
+/* chữ đỏ */
+
+.note-red{
+margin-top:8px;
+color:#ff3b3b;
+font-size:15px;
+animation:blink 1.5s infinite;
+}
+
+@keyframes blink{
+0%{opacity:0.5;}
+50%{opacity:1;}
+100%{opacity:0.5;}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- màn hình chạm -->
+
+<div id="intro" onclick="startWeb()">
+CHẠM VÀO MÀN HÌNH ĐỂ VÀO WEB
+</div>
+
+<!-- nhạc -->
+
+<audio id="music" loop>
+<source src="https://files.catbox.moe/ktv8d9.mp3">
+</audio>
+
+<!-- nội dung web -->
+
+<div id="main">
+
+<header>BẢNG GIÁ DAME TIKTOK</header>
+
+<div class="box">
+
+<h3>Dame Acc TikTok</h3>
+
+<div>1 Acc — 20K</div>
+<div>2 Acc — 40K</div>
+<div>3 Acc — 50K</div>
+<div>5 Acc — 70K</div>
+<div>6 Acc — 80K</div>
+<div>7 Acc — 100K</div>
+<div>8 Acc — 120K</div>
+<div>10 Acc — 140K</div>
+
+<br>
+
+🔥 Mua trên 50K được dame FREE 1 Acc
+
+<br><br>
+
+📚 Giá Tut + Chỉ Dame TikTok  
+<br>
+💰 300K ➜ 500K
+
+<div class="note-yellow">
+✔ Nếu đơn từ 13T trở lên gửi ảnh hồ sơ để định giá
+</div>
+
+<div class="note-red">
+✔ Lỗi hệ thống tự hoàn tiền lại cho bạn
+</div>
+
+<br>
+
+<button onclick="openFacebook()">
+📘 Liên hệ Facebook
+</button>
+
+<br>
+
+<button onclick="copyZalo()">
+📋 Copy Số Zalo
+</button>
+
+<p id="copyText">
+✔ Đã copy số Zalo gửi kết bạn và nhắn tôi
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function startWeb(){
+
+document.getElementById("intro").style.display="none";
+
+document.getElementById("main").style.display="block";
+
+document.getElementById("music").play();
+
+}
+
+function openFacebook(){
+
+window.open("https://www.facebook.com/share/1GYst9NFWu/");
+
+}
+
+function copyZalo(){
+
+navigator.clipboard.writeText("0366472732");
+
+let text=document.getElementById("copyText");
+
+text.style.opacity="1";
+
+setTimeout(()=>{
+
+text.style.opacity="0";
+
+},2000);
+
+}
+
+</script>
+
+</body>
+</html>
